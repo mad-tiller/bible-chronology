@@ -249,3 +249,156 @@ input:focus {
     padding: 40px 20px;
   }
 }
+
+.error-message {
+  color: #ff4444;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Navbar Updates */
+.navbar {
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+/* Hamburger Menu Button */
+.menu-toggle {
+  display: none; /* Hidden by default on desktop */
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1001;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: #637381;
+  transition: all 0.3s ease;
+}
+
+.hamburger {
+  position: relative;
+}
+
+.hamburger::before {
+  position: absolute;
+  top: -8px;
+}
+
+.hamburger::after {
+  position: absolute;
+  top: 8px;
+}
+
+/* Open State for Hamburger */
+.menu-toggle.open .hamburger {
+  background: transparent;
+}
+
+.menu-toggle.open .hamburger::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.menu-toggle.open .hamburger::after {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #637381;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: #0061ff;
+}
+
+.nav-links a.active {
+  color: #0061ff;
+  font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* Show hamburger on mobile */
+  }
+
+  .nav-links {
+    display: none; /* Hide by default on mobile */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 1000;
+  }
+
+  .nav-links.open {
+    display: flex; /* Show when toggled */
+  }
+
+  .nav-links a {
+    margin: 10px 0;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Ensure logo stays visible */
+.logo {
+  font-size: 24px;
+  font-weight: 600;
+  color: #0061ff;
+  text-decoration: none;
+}
+
+.logo.active {
+  color: #0061ff;
+}
+
+.logout-button {
+  margin-left: 20px;
+  background: none;
+  border: none;
+  color: #637381;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  color: #0061ff;
+}
+
+@media (max-width: 768px) {
+  .logout-button {
+    margin: 10px 0;
+    width: 100%;
+    text-align: center;
+  }
+}

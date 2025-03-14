@@ -1,6 +1,17 @@
 import React from 'react';
+import { useNavigate } from 'react-router';
+import { useAuth } from '../context/AuthContext';
 
 function About() {
+  const { isAuthenticated } = useAuth();
+  const navigate = useNavigate();
+
+  React.useEffect(() => {
+    if (!isAuthenticated) {
+      navigate('/login');
+    }
+  }, [isAuthenticated, navigate]);
+
   return (
     <div className="about-container">
       <div className="about-content">
