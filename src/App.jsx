@@ -12,8 +12,8 @@ function App() {
         <BrowserRouter>
           <Routes>
           <Route path="/" element={<Landing />} />
-            <Route path="login" element={<LoginForm />} />
-            <Route path="about" element={<About />} />
+            <Route path="/login" element={<LoginForm />} />
+            <Route path="/about" element={<About />} />
           </Routes>
         </BrowserRouter>
       </StrictMode>
