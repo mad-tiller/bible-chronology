@@ -9,7 +9,7 @@ import './styles.css';
 function App() {
   return ( 
     <StrictMode>
-        <BrowserRouter>
+        <BrowserRouter basename="/bible-chronology">
           <Routes>
           <Route path="/" element={<Landing />} />
             <Route path="/login" element={<LoginForm />} />
