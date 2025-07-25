@@ -1,0 +1,284 @@
+{
+  "categories": [
+    {
+      "name": "King David's Final Days",
+      "questions": [
+        {
+          "question": "Who was the young virgin brought to keep King David warm in his old age?",
+          "options": ["Abishag", "Bathsheba", "Michal", "Abigail"],
+          "correctAnswer": "Abishag",
+          "value": 200
+        },
+        {
+          "question": "Which son of David declared himself king without David's approval?",
+          "options": ["Adonijah", "Solomon", "Absalom", "Amnon"],
+          "correctAnswer": "Adonijah",
+          "value": 400
+        },
+        {
+          "question": "Who informed David about Adonijah's actions to claim the throne?",
+          "options": ["Nathan", "Joab", "Zadok", "Benaiah"],
+          "correctAnswer": "Nathan",
+          "value": 600
+        },
+        {
+          "question": "What did David instruct to be done to confirm Solomon as king?",
+          "options": ["Anoint him at Gihon", "Build a temple", "Send him to war", "Give him a crown"],
+          "correctAnswer": "Anoint him at Gihon",
+          "value": 800
+        },
+        {
+          "question": "Who was tasked with anointing Solomon as king?",
+          "options": ["Zadok and Nathan", "Joab and Abiathar", "Benaiah and Shimei", "Jonathan and Ahimaaz"],
+          "correctAnswer": "Zadok and Nathan",
+          "value": 1000
+        }
+      ]
+    },
+    {
+      "name": "Solomon's Rise",
+      "questions": [
+        {
+          "question": "What did Solomon ask God for when He appeared to him in a dream?",
+          "options": ["Wisdom", "Wealth", "Long life", "Victory over enemies"],
+          "correctAnswer": "Wisdom",
+          "value": 200
+        },
+        {
+          "question": "How did Solomon demonstrate his wisdom in the case of the two women?",
+          "options": ["Dividing a baby", "Giving the child to the king", "Asking for a sacrifice", "Consulting priests"],
+          "correctAnswer": "Dividing a baby",
+          "value": 400
+        },
+        {
+          "question": "Who was Solomon's mother?",
+          "options": ["Bathsheba", "Abishag", "Michal", "Haggith"],
+          "correctAnswer": "Bathsheba",
+          "value": 600
+        },
+        {
+          "question": "What did Solomon do to Adonijah after he requested Abishag as a wife?",
+          "options": ["Had him executed", "Banished him", "Forgave him", "Imprisoned him"],
+          "correctAnswer": "Had him executed",
+          "value": 800
+        },
+        {
+          "question": "Who replaced Joab as commander of the army?",
+          "options": ["Benaiah", "Zadok", "Abiathar", "Shimei"],
+          "correctAnswer": "Benaiah",
+          "value": 1000
+        }
+      ]
+    },
+    {
+      "name": "Building the Temple",
+      "questions": [
+        {
+          "question": "How many years did it take to build the Temple?",
+          "options": ["Seven", "Ten", "Twelve", "Five"],
+          "correctAnswer": "Seven",
+          "value": 200
+        },
+        {
+          "question": "What type of wood was primarily used in the Temple's construction?",
+          "options": ["Cedar", "Oak", "Pine", "Acacia"],
+          "correctAnswer": "Cedar",
+          "value": 400
+        },
+        {
+          "question": "Who provided the cedar and cypress for the Temple?",
+          "options": ["Hiram of Tyre", "King of Egypt", "David", "Zadok"],
+          "correctAnswer": "Hiram of Tyre",
+          "value": 600
+        },
+        {
+          "question": "What was the inner sanctuary of the Temple called?",
+          "options": ["Holy of Holies", "Outer Court", "Altar Room", "Sanctum"],
+          "correctAnswer": "Holy of Holies",
+          "value": 800
+        },
+        {
+          "question": "What was overlaid with gold inside the Temple?",
+          "options": ["The entire interior", "The altar only", "The walls only", "The floor only"],
+          "correctAnswer": "The entire interior",
+          "value": 1000
+        }
+      ]
+    },
+    {
+      "name": "Temple Furnishings",
+      "questions": [
+        {
+          "question": "What were the two large pillars at the Temple entrance named?",
+          "options": ["Jachin and Boaz", "Ebenezer and Bethel", "Zion and Hebron", "Gilead and Dan"],
+          "correctAnswer": "Jachin and Boaz",
+          "value": 200
+        },
+        {
+          "question": "What was the large basin for washing called?",
+          "options": ["Molten Sea", "Bronze Altar", "Golden Bowl", "Sacred Pool"],
+          "correctAnswer": "Molten Sea",
+          "value": 400
+        },
+        {
+          "question": "Who crafted the bronze furnishings for the Temple?",
+          "options": ["Hiram of Tyre", "Solomon", "Bezalel", "Aholiab"],
+          "correctAnswer": "Hiram of Tyre",
+          "value": 600
+        },
+        {
+          "question": "How many basins were on the wheeled stands in the Temple?",
+          "options": ["Ten", "Five", "Twelve", "Seven"],
+          "correctAnswer": "Ten",
+          "value": 800
+        },
+        {
+          "question": "What material were the lampstands in the Temple made of?",
+          "options": ["Gold", "Bronze", "Silver", "Wood"],
+          "correctAnswer": "Gold",
+          "value": 1000
+        }
+      ]
+    },
+    {
+      "name": "Solomon's Palace",
+      "questions": [
+        {
+          "question": "How long did it take to build Solomon's palace?",
+          "options": ["Thirteen years", "Seven years", "Ten years", "Twenty years"],
+          "correctAnswer": "Thirteen years",
+          "value": 200
+        },
+        {
+          "question": "What was the name of the hall with pillars in Solomon's palace?",
+          "options": ["Hall of Pillars", "Throne Room", "Judgment Hall", "Cedar Hall"],
+          "correctAnswer": "Hall of Pillars",
+          "value": 400
+        },
+        {
+          "question": "What material covered the walls of Solomon's palace?",
+          "options": ["Cedar", "Gold", "Marble", "Bronze"],
+          "correctAnswer": "Cedar",
+          "value": 600
+        },
+        {
+          "question": "What was the name of the throne room in the palace?",
+          "options": ["Hall of Judgment", "Cedar Hall", "Pillar Room", "Golden Hall"],
+          "correctAnswer": "Hall of Judgment",
+          "value": 800
+        },
+        {
+          "question": "What was overlaid with ivory in the throne room?",
+          "options": ["The throne", "The walls", "The floor", "The pillars"],
+          "correctAnswer": "The throne",
+          "value": 1000
+        }
+      ]
+    },
+    {
+      "name": "Solomon's Wisdom",
+      "questions": [
+        {
+          "question": "Who visited Solomon to test his wisdom?",
+          "options": ["Queen of Sheba", "King of Tyre", "Pharaoh", "King of Moab"],
+          "correctAnswer": "Queen of Sheba",
+          "value": 200
+        },
+        {
+          "question": "What did the Queen of Sheba bring to Solomon?",
+          "options": ["Gold, spices, and precious stones", "Silver and bronze", "Horses and chariots", "Cloth and wine"],
+          "correctAnswer": "Gold, spices, and precious stones",
+          "value": 400
+        },
+        {
+          "question": "How did the Queen of Sheba react to Solomon's wisdom?",
+          "options": ["She was astonished", "She was unimpressed", "She challenged him", "She left immediately"],
+          "correctAnswer": "She was astonished",
+          "value": 600
+        },
+        {
+          "question": "What did Solomon give to the Queen of Sheba?",
+          "options": ["All she desired", "A new throne", "A temple tour", "Gold only"],
+          "correctAnswer": "All she desired",
+          "value": 800
+        },
+        {
+          "question": "How many proverbs did Solomon speak?",
+          "options": ["Three thousand", "One thousand", "Five hundred", "Ten thousand"],
+          "correctAnswer": "Three thousand",
+          "value": 1000
+        }
+      ]
+    },
+    {
+      "name": "Alliances and Trade",
+      "questions": [
+        {
+          "question": "Who was Solomon's ally in Tyre?",
+          "options": ["Hiram", "Pharaoh", "Hadad", "Rezon"],
+          "correctAnswer": "Hiram",
+          "value": 200
+        },
+        {
+          "question": "What did Solomon trade for cedar and cypress?",
+          "options": ["Wheat and oil", "Gold and silver", "Horses and chariots", "Wine and cloth"],
+          "correctAnswer": "Wheat and oil",
+          "value": 400
+        },
+        {
+          "question": "What did Solomon give Hiram in exchange for his help?",
+          "options": ["Twenty cities in Galilee", "Gold mines", "A new palace", "A fleet of ships"],
+          "correctAnswer": "Twenty cities in Galilee",
+          "value": 600
+        },
+        {
+          "question": "What was the name of Solomon's fleet port?",
+          "options": ["Eziongeber", "Joppa", "Tyre", "Sidon"],
+          "correctAnswer": "Eziongeber",
+          "value": 800
+        },
+        {
+          "question": "What did Solomon's ships bring back from Ophir?",
+          "options": ["Gold", "Silver", "Bronze", "Iron"],
+          "correctAnswer": "Gold",
+          "value": 1000
+        }
+      ]
+    },
+    {
+      "name": "Temple Dedication",
+      "questions": [
+        {
+          "question": "What was brought into the Temple during its dedication?",
+          "options": ["Ark of the Covenant", "Golden Altar", "Molten Sea", "Lampstands"],
+          "correctAnswer": "Ark of the Covenant",
+          "value": 200
+        },
+        {
+          "question": "Where was the Ark placed in the Temple?",
+          "options": ["Holy of Holies", "Outer Court", "Altar Room", "Porch"],
+          "correctAnswer": "Holy of Holies",
+          "value": 400
+        },
+        {
+          "question": "What appeared when the priests came out of the Holy Place?",
+          "options": ["Cloud", "Fire", "Light", "Smoke"],
+          "correctAnswer": "Cloud",
+          "value": 600
+        },
+        {
+          "question": "What did Solomon do during the Temple dedication?",
+          "options": ["Prayed and blessed the people", "Sacrificed alone", "Sang psalms", "Built an altar"],
+          "correctAnswer": "Prayed and blessed the people",
+          "value": 800
+        },
+        {
+          "question": "How many oxen were sacrificed during the dedication?",
+          "options": ["Twenty-two thousand", "Ten thousand", "Five thousand", "One thousand"],
+          "correctAnswer": "Twenty-two thousand",
+          "value": 1000
+        }
+      ]
+    }
+  ]
+}

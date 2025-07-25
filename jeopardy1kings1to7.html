@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jeopardy: 1 Kings 1-7</title>
+  <script src="https://cdn.jsdelivr.net/npm/react@18.2.0/umd/react.production.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.24.7/babel.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-blue-900 text-white flex items-center justify-center min-h-screen">
+  <div id="root"></div>
+  <script type="text/babel">
+    const { useState, useEffect } = React;
+
+    const JeopardyBoard = () => {
+      const [questions, setQuestions] = useState([]);
+      const [selectedQuestion, setSelectedQuestion] = useState(null);
+      const [showModal, setShowModal] = useState(false);
+      const [isCorrect, setIsCorrect] = useState(null);
+      const [answeredQuestions, setAnsweredQuestions] = useState({});
+      const [error, setError] = useState(null);
+
+      useEffect(() => {
+        fetch('questions.json')
+          .then(response => {
+            if (!response.ok) {
+              throw new Error(`Failed to load questions.json: ${response.statusText}`);
+            }
+            return response.json();
+          })
+          .then(data => setQuestions(data.categories))
+          .catch(error => {
+            console.error('Error loading questions:', error);
+            setError('Failed to load questions. Please ensure questions.json is in the same directory and the server is running correctly.');
+          });
+      }, []);
+
+      const handleQuestionClick = (categoryIndex, questionIndex, question) => {
+        if (!answeredQuestions[`${categoryIndex}-${questionIndex}`]) {
+          setSelectedQuestion({ ...question, categoryIndex, questionIndex });
+          setShowModal(true);
+        }
+      };
+
+      const handleAnswer = (selectedOption) => {
+        const correct = selectedOption === selectedQuestion.correctAnswer;
+        setIsCorrect(correct);
+        setAnsweredQuestions(prev => ({
+          ...prev,
+          [`${selectedQuestion.categoryIndex}-${selectedQuestion.questionIndex}`]: correct
+        }));
+      };
+
+      const closeModal = () => {
+        setShowModal(false);
+        setSelectedQuestion(null);
+        setIsCorrect(null);
+      };
+
+      if (error) {
+        return (
+          <div className="container mx-auto p-4 text-center">
+            <h1 className="text-4xl font-bold mb-8">Jeopardy: 1 Kings 1-7 (KJV)</h1>
+            <p className="text-red-500 text-xl">{error}</p>
+            <p className="mt-4">Please ensure the questions.json file is in the same directory as index.html and that you are running a local web server (e.g., python -m http.server).</p>
+          </div>
+        );
+      }
+
+      return (
+        <div className="container mx-auto p-4">
+          <h1 className="text-4xl font-bold text-center mb-8">Jeopardy: 1 Kings 1-7 (KJV)</h1>
+          <div className="grid grid-cols-8 gap-2">
+            {questions.map((category, categoryIndex) => (
+              <div key={categoryIndex} className="flex flex-col">
+                <div className="bg-blue-700 text-white text-center font-bold p-4 rounded">{category.name}</div>
+                {category.questions.map((question, questionIndex) => (
+                  <div
+                    key={questionIndex}
+                    className={`p-4 text-center rounded cursor-pointer 
+                      ${answeredQuestions[`${categoryIndex}-${questionIndex}`] === undefined
+                        ? 'bg-yellow-500 hover:bg-yellow-600'
+                        : answeredQuestions[`${categoryIndex}-${questionIndex}`]
+                          ? 'bg-green-500'
+                          : 'bg-orange-500'
+                      }`}
+                    onClick={() => handleQuestionClick(categoryIndex, questionIndex, question)}
+                  >
+                    ${question.value}
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
+
+          {showModal && selectedQuestion && (
+            <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+              <div className="bg-white text-black p-6 rounded-lg max-w-lg w-full">
+                <h2 className="text-xl font-bold mb-4">{selectedQuestion.question}</h2>
+                <div className="grid grid-cols-1 gap-2">
+                  {selectedQuestion.options.map((option, index) => (
+                    <button
+                      key={index}
+                      className="bg-blue-500 text-white p-2 rounded hover:bg-blue-600"
+                      onClick={() => handleAnswer(option)}
+                      disabled={isCorrect !== null}
+                    >
+                      {option}
+                    </button>
+                  ))}
+                </div>
+                {isCorrect !== null && (
+                  <div className="mt-4">
+                    <p className={`text-lg font-bold ${isCorrect ? 'text-green-600' : 'text-red-600'}`}>
+                      {isCorrect ? 'Correct!' : 'Incorrect!'}
+                    </p>
+                    <p>Correct Answer: {selectedQuestion.correctAnswer}</p>
+                    <button
+                      className="mt-4 bg-gray-500 text-white p-2 rounded hover:bg-gray-600"
+                      onClick={closeModal}
+                    >
+                      OK
+                    </button>
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
+        </div>
+      );
+    };
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<JeopardyBoard />);
+  </script>
+</body>
+</html>
